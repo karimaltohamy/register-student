@@ -308,3 +308,476 @@ header {
   }
 }
 // end hero_section
+
+// start why_chooseUs
+.why_chooseUs {
+  padding: 90px 0;
+  background-color: $dark-color;
+  color: white;
+
+  .line {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .left,
+    .right {
+      width: 50%;
+    }
+
+    .left {
+      .subtitle {
+        font-size: 18px;
+        color: $primary-color;
+      }
+
+      .title {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .desc {
+        color: rgb(187, 187, 187);
+        line-height: 1.6;
+      }
+
+      .features {
+        .feature {
+          display: flex;
+          gap: 5px;
+
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+
+          i {
+            font-size: 19px;
+            color: $primary-color;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 330px;
+        height: 330px;
+        border: 2px solid $primary-color;
+        border-radius: 12px;
+      }
+
+      .image,
+      .image2 {
+        position: absolute;
+        img {
+          height: 330px;
+          width: 380px;
+          object-fit: cover;
+          border-radius: 12px;
+        }
+      }
+
+      .image {
+        top: -240px;
+        right: 0;
+      }
+
+      .image2 {
+        top: -60px;
+        left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .why_chooseUs {
+    padding: 40px 0;
+
+    .line {
+      flex-direction: column;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        text-align: center;
+
+        .subtitle {
+          font-size: 14px;
+        }
+
+        .title {
+          font-size: 20px;
+          margin-bottom: 3;
+        }
+
+        .desc {
+          font-size: 13px;
+          line-height: 1.4;
+        }
+
+        .features {
+          .feature {
+            &:not(:last-child) {
+              margin-bottom: 6px;
+            }
+
+            i {
+              font-size: 13px;
+            }
+
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .right {
+        height: 360px;
+
+        &::before {
+          width: 250px;
+          height: 250px;
+        }
+
+        .image,
+        .image2 {
+          img {
+            max-width: 250px;
+            width: 100%;
+            height: 250px;
+          }
+        }
+
+        .image {
+          top: 0;
+        }
+
+        .image2 {
+          top: 130px;
+        }
+      }
+    }
+  }
+}
+// end why_chooseUs
+
+// start skyteam_programs
+.skyteam_programs {
+  padding: 70px 0;
+
+  .title {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .line {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+
+    .left {
+      width: 30%;
+
+      .subtitle {
+        font-size: 19px;
+        color: $primary-color;
+      }
+
+      .title_line {
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      .desc {
+        font-size: 15px;
+        color: gray;
+      }
+    }
+
+    .right {
+      width: 70%;
+      padding: 40px;
+      background-image: url(../images//bg-services.jpg);
+      background-position: center left;
+      background-size: cover;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #302f2f;
+        opacity: 0.9;
+      }
+
+      .boxs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 10px;
+        position: relative;
+        z-index: 10;
+        color: whitesmoke;
+
+        .box {
+          transition: all 0.3s;
+          padding: 15px;
+          border-radius: 12px;
+
+          &:hover,
+          &.active {
+            background-color: $primary-color;
+          }
+
+          .icon {
+            margin-bottom: 10px;
+            img {
+              width: 55px;
+            }
+          }
+
+          .text {
+            h4 {
+              font-size: 20px;
+              font-weight: 600;
+              margin-bottom: 5px;
+            }
+
+            p {
+              font-size: 15px;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skyteam_programs {
+    padding: 35px 0;
+
+    .title {
+      font-size: 20px;
+    }
+
+    .line {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        text-align: center;
+
+        .subtitle {
+          font-size: 17px;
+        }
+
+        .title_line {
+          font-size: 19px;
+        }
+
+        .desc {
+          font-size: 13px;
+          margin-bottom: 0;
+        }
+      }
+
+      .right {
+        padding: 20px;
+        .boxs {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+          .box {
+            text-align: center;
+
+            .icon {
+              img {
+                width: 40px;
+              }
+            }
+
+            .text {
+              h4 {
+                font-size: 18px;
+                margin-bottom: 2px;
+              }
+
+              p {
+                margin-bottom: 0;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end skyteam_programs
+
+// satrt asked_questions
+.asked_questions {
+  padding: 80px 0;
+  background-color: $dark-color;
+  background-image: url("../images/request-quote-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  .title {
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .faq_box {
+    .accordion {
+      .accordion-item {
+        border-radius: 10px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        border: none;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        .accordion-button {
+          border: none;
+          border-radius: 7px;
+          font-weight: 600;
+          background: #263648;
+          color: white;
+
+          &:not(.collapsed) {
+            background-color: $primary-color !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .asked_questions {
+    padding: 40px 0;
+
+    .title {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .faq_box {
+      .accordion {
+        .accordion-item {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+          .accordion-button {
+            font-size: 14px;
+            padding: 10px;
+          }
+
+          .accordion-body {
+            padding: 8px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+// end asked_questions
+
+// start footer
+footer {
+  background-color: #131a23;
+  color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+  .line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .copy_right {
+      margin-bottom: 0;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .social_media {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      a {
+        i {
+          font-size: 18px;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    .line {
+      flex-direction: column;
+      gap: 10px;
+
+      .copy_right {
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .social_media {
+        gap: 10px;
+
+        a {
+          i {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+// end footer
